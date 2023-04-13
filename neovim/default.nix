@@ -1,7 +1,4 @@
-{ lib, ... }:
-
-final: prev:
-let
+final: prev: let
   vim-colortemplate = prev.vimUtils.buildVimPlugin {
     pname = "janet-vim";
     version = "git";
@@ -12,9 +9,8 @@ let
       sha256 = "sha256-n9j80+BdUxphAw8WWjGUtfvk71tyjqFCFBDv/bxTVHE=";
     };
   };
-in
-{
-  neovim = (prev.neovim.override {
+in {
+  neovim = prev.neovim.override {
     configure = {
       # will be passed to the -u option of nvim
       # do `cat .../bin/nvim` to find the `...-init.vim` (after -u) then
@@ -61,48 +57,49 @@ in
           # SYNTAX HIGHLIGHT
           #
           #(nvim-treesitter.withPlugins (plugins: tree-sitter.allGrammars))
-          (nvim-treesitter.withPlugins (plugins: with plugins; [
-            # common
-            tree-sitter-markdown
-            tree-sitter-comment
-            # languages
-            tree-sitter-elixir
-            tree-sitter-heex
-            tree-sitter-erlang
-            tree-sitter-nix
-            tree-sitter-rust
-            tree-sitter-c
-            tree-sitter-cpp
-            tree-sitter-llvm
-            tree-sitter-clojure
-            tree-sitter-commonlisp
-            #tree-sitter-kotlin
-            tree-sitter-zig
-            tree-sitter-lua
-            tree-sitter-elm
-            tree-sitter-haskell
-            tree-sitter-dart
-            tree-sitter-gdscript
-            tree-sitter-godot-resource
-            # web
-            tree-sitter-svelte
-            tree-sitter-javascript
-            tree-sitter-typescript
-            tree-sitter-html
-            tree-sitter-css
-            tree-sitter-scss
-            # tools
-            tree-sitter-vim
-            tree-sitter-dot
-            tree-sitter-cmake
-            tree-sitter-make
-            tree-sitter-dockerfile
-            tree-sitter-yaml
-            tree-sitter-toml
-            tree-sitter-json
-            tree-sitter-regex
-            tree-sitter-graphql
-          ]))
+          (nvim-treesitter.withPlugins (plugins:
+            with plugins; [
+              # common
+              tree-sitter-markdown
+              tree-sitter-comment
+              # languages
+              tree-sitter-elixir
+              tree-sitter-heex
+              tree-sitter-erlang
+              tree-sitter-nix
+              tree-sitter-rust
+              tree-sitter-c
+              tree-sitter-cpp
+              tree-sitter-llvm
+              tree-sitter-clojure
+              tree-sitter-commonlisp
+              #tree-sitter-kotlin
+              tree-sitter-zig
+              tree-sitter-lua
+              tree-sitter-elm
+              tree-sitter-haskell
+              tree-sitter-dart
+              tree-sitter-gdscript
+              tree-sitter-godot-resource
+              # web
+              tree-sitter-svelte
+              tree-sitter-javascript
+              tree-sitter-typescript
+              tree-sitter-html
+              tree-sitter-css
+              tree-sitter-scss
+              # tools
+              tree-sitter-vim
+              tree-sitter-dot
+              tree-sitter-cmake
+              tree-sitter-make
+              tree-sitter-dockerfile
+              tree-sitter-yaml
+              tree-sitter-toml
+              tree-sitter-json
+              tree-sitter-regex
+              tree-sitter-graphql
+            ]))
           kotlin-vim
           #nvim-treesitter-textobjects
           #
@@ -122,8 +119,8 @@ in
           ccc-nvim
         ];
         # manually loadable by calling `:packadd $plugin-name`
-        opt = [ ];
+        opt = [];
       };
     };
-  });
+  };
 }
