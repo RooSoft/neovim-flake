@@ -14,7 +14,7 @@
     nixpkgs_unstable,
     # neovim,
   }: let
-    neovim_overlay = import ./neovim-overlay.nix;
+    neovim_overlay = import ./neovim;
 
     pkgs = import nixpkgs {
       system = "x86_64-linux";
