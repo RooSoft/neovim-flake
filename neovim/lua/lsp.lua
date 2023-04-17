@@ -23,6 +23,10 @@ local function on_attach(client, bufnr)
   vim.keymap.set("x", "<leader>p", "\"_dP")
   vim.keymap.set("n", "<leader>y", "\"+y")
   vim.keymap.set("n", "<leader>Y", "\"+Y")
+  vim.keymap.set("n", "<C-f>", "<cmd>slient !tmux neww tmux-sessionizer<CR>")
+  vim.keymap.set("n", "<leader>f", function()
+    vim.lsp.buf.format()
+  end)
 
   -- :help vim.diagnostic.*
   local d = vim.diagnostic
