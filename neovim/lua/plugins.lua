@@ -126,9 +126,6 @@ require("nvim-tree").setup({
       error = ""
     }
   },
-  modified = {
-    enable = true
-  },
   view = {
     hide_root_folder = true,
     width = 30,
