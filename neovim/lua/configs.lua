@@ -43,10 +43,10 @@ o.lcs = "eol:\194\172,extends:\226\157\175,precedes:\226\157\174,tab:>-" -- the 
 o.number = true
 o.relativenumber = true -- line number is relative to cursor
 o.mouse = "a" -- enable mouse
-o.cursorline = false -- dont highlight the current cursor line
+o.cursorline = true -- dont highlight the current cursor line
 o.smartindent = true -- smart ident (priority for C like langs)
 o.autoindent = true -- copy the ident of current line when using the o or O commands
-o.wrap = true -- continue long lines in the next line
+o.wrap = false -- continue long lines in the next line
 o.linebreak = true
 o.lazyredraw = true -- screen will not redrawn while exec macros, registers or not typed commands
 o.showmatch = true -- jump to a match when executed
@@ -58,6 +58,7 @@ o.signcolumn = "no" -- hide the column for error signs
 o.showcmd = true -- show commands in the last line off screen
 o.cmdheight = 2 -- better display for messages
 o.scrolloff = 10 -- centers the cursor when moving
+o.colorcolumn = "120" -- put a column at 120 as a reminder to keep lines short
 
 -- StatusLine
 -- F to full name
@@ -72,7 +73,9 @@ o.foldnestmax = 10 -- limit the folds in the indent and syntax
 
 o.backup = false -- no backup file when overwriting
 o.writebackup = false -- no make backup before overwriting
-o.swapfile = true -- enable swapfile (dont use it with confidential information, that even root must not be able to acess!)
+o.swapfile = false -- enable swapfile (dont use it with confidential information, that even root must not be able to acess!)
+o.undodir = os.getenv("HOME") .. "/.vim/undodir"  -- keep undos
+o.undofile = true
 o.shortmess = "A" -- don't give the "ATTENTION" message when an existing swap file is found.
 o.hidden = true -- buffer continue to exists when the file is abandoned
 o.history = 100 -- history of the : commands
