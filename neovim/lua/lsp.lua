@@ -21,6 +21,7 @@ local function on_attach(client, bufnr)
   vim.keymap.set("n", "n", "nzzzv")
   vim.keymap.set("n", "N", "Nzzzv")
   vim.keymap.set("x", "<leader>p", "\"_dP")
+  vim.keymap.set("n", "<leader>y", "\"+y")
   vim.keymap.set("n", "<leader>Y", "\"+Y")
 
   -- :help vim.diagnostic.*

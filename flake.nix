@@ -12,7 +12,7 @@
     self,
     nixpkgs,
     nixpkgs_unstable,
-    # neovim,
+# neovim,
   }: let
     neovim_overlay = import ./neovim;
 
