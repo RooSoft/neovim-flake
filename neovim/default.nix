@@ -11,6 +11,8 @@ final: prev: let
   };
 in {
   neovim = prev.neovim.override {
+    vimAlias = true;
+    viAlias = true;
     configure = {
       # will be passed to the -u option of nvim
       # do `cat .../bin/nvim` to find the `...-init.vim` (after -u) then
