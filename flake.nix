@@ -17,9 +17,13 @@
     let
       neovim_overlay = import ./neovim;
 
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgsForSystem = system: import nixpkgs {
+        overlays = [ neovim_overlay ];
+        inherit system;
+      };
+
+      pkgs = pkgsForSystem system;
     in {
-      overlays.default = neovim_overlay;
       packages = pkgs.neovim;
       devShell = pkgs.mkShell {
         buildInputs = [pkgs.neovim];
