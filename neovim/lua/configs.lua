@@ -129,10 +129,10 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-vim.keymap.set("n", "<C-f>", "<cmd>slient !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", function()
   vim.lsp.buf.format()
 end)
+vim.keymap.set("n", "<leader>t", "<c-6>")
 
 
 -- Load ned configs
