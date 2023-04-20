@@ -120,6 +120,21 @@ local function noremap(bind, command)
   return vim.api.nvim_set_keymap("", bind, command, {noremap = true, silent = true})
 end
 
+
+-- from the PRIMEAGEN --
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move selected block upwards, reindenting
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move selected block downwards, reindenting
+vim.keymap.set("n", "J", "mzJ`z") -- bring the line below at the end of the current line
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "<C-f>", "<cmd>slient !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<leader>f", function()
+  vim.lsp.buf.format()
+end)
+
+
 -- Load ned configs
 nnoremap("<leader><Leader>r", ":lua reload()<cr>")
 

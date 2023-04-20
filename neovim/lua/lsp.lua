@@ -12,22 +12,6 @@ local function on_attach(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-  -- from the PRIMEAGEN --
-  vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move selected block upwards, reindenting
-  vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move selected block downwards, reindenting
-  vim.keymap.set("n", "J", "mzJ`z") -- bring the line below at the end of the current line
-  vim.keymap.set("n", "<C-d>", "<C-d>zz")
-  vim.keymap.set("n", "<C-u>", "<C-u>zz")
-  vim.keymap.set("n", "n", "nzzzv")
-  vim.keymap.set("n", "N", "Nzzzv")
-  vim.keymap.set("x", "<leader>p", "\"_dP")
-  vim.keymap.set("n", "<leader>y", "\"+y")
-  vim.keymap.set("n", "<leader>Y", "\"+Y")
-  vim.keymap.set("n", "<C-f>", "<cmd>slient !tmux neww tmux-sessionizer<CR>")
-  vim.keymap.set("n", "<leader>f", function()
-    vim.lsp.buf.format()
-  end)
-
   -- :help vim.diagnostic.*
   local d = vim.diagnostic
 
