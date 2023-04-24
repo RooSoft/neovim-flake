@@ -119,6 +119,7 @@ in {
           #
           which-key-nvim
           ccc-nvim
+          nvim-comment
         ];
         # manually loadable by calling `:packadd $plugin-name`
         opt = [];
