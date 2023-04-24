@@ -120,6 +120,8 @@ in {
           which-key-nvim
           ccc-nvim
           nvim-comment
+          plenary-nvim
+          telescope-nvim
         ];
         # manually loadable by calling `:packadd $plugin-name`
         opt = [];

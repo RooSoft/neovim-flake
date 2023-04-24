@@ -186,7 +186,7 @@ noremap("<Leader>sa", ":Ag<CR>")
 -- Rg result, Search inside ALL
 noremap("<Leader>ss", ":Rg<CR>")
 -- Search on git versioned files
-noremap("<Leader>sf", ":GFiles<CR>")
+noremap("<Leader>sf", ":Telescope find_files<CR>")
 -- Search on all files
 noremap("<Leader>sF", ":Files<CR>")
 -- Search on the buffer history
