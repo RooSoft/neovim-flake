@@ -182,7 +182,7 @@ g["sneak#label"] = 1
 --c("command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)")
 c("command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)")
 -- Ag result, ALL
-noremap("<Leader>sa", ":Ag<CR>")
+noremap("<Leader>sa", ":Rg<CR>")
 -- Rg result, Search inside ALL
 noremap("<Leader>ss", ":Rg<CR>")
 -- Search on git versioned files
