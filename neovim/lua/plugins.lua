@@ -128,7 +128,7 @@ require("nvim-tree").setup({
   },
   view = {
     hide_root_folder = true,
-    width = 30,
+    width = 40,
     mappings = {
       list = {
         { key = "<C-up>", action = "dir_up" },
@@ -195,3 +195,5 @@ require("ccc").setup({
     auto_enable = true
   }
 })
+
+require('nvim_comment').setup({comment_empty = false})

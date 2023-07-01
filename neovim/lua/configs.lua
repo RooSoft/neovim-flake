@@ -184,13 +184,13 @@ c("command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'o
 -- Ag result, ALL
 noremap("<Leader>sa", ":Rg<CR>")
 -- Rg result, Search inside ALL
-noremap("<Leader>ss", ":Rg<CR>")
+noremap("<Leader>ss", ":Telescope live_grep<CR>")
 -- Search on git versioned files
-noremap("<Leader>sf", ":GFiles<CR>")
+noremap("<Leader>sf", ":Telescope find_files<CR>")
 -- Search on all files
 noremap("<Leader>sF", ":Files<CR>")
 -- Search on the buffer history
-noremap("<Leader>sb", ":Buffers<CR>")
+noremap("<Leader>sb", ":Telescope buffers<CR>")
 -- Search on the file history
 noremap("<Leader>sh", ":History<CR>")
 -- Search on the buffer tags
