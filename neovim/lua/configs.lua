@@ -154,9 +154,20 @@ nnoremap("<c-right>", "<c-w><c-l>")
 noremap("<leader>vs", ":vs<cr>")
 noremap("<leader>vv", ":sp<cr>")
 
--- Clipboard
-noremap("<leader>y", "\"+y")
-noremap("<leader>p", "\"+p")
+-- Yank to clipboard
+--noremap("<leader>y", "\"+y")
+--noremap("<leader>p", "\"+p")
+
+vnoremap("<leader>y", "\"+y")
+nnoremap("<leader>Y", "\"+yg_")
+nnoremap("<leader>y", "\"+y")
+nnoremap("<leader>yy", "\"+yy")
+
+-- Paste from clipboard
+nnoremap("<leader>p", "\"+p")
+nnoremap("<leader>P", "\"+P")
+vnoremap("<leader>p", "\"+p")
+vnoremap("<leader>P", "\"+P")
 
 -- Save
 nnoremap("<leader>w", ":w<cr>")
