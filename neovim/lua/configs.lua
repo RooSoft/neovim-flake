@@ -59,6 +59,7 @@ o.showcmd = true -- show commands in the last line off screen
 o.cmdheight = 2 -- better display for messages
 o.scrolloff = 10 -- centers the cursor when moving
 o.colorcolumn = "120" -- put a column at 120 as a reminder to keep lines short
+o.clipboard = "unnamedplus"
 
 -- StatusLine
 -- F to full name
