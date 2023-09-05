@@ -129,14 +129,6 @@ require("nvim-tree").setup({
   view = {
     hide_root_folder = true,
     width = 40,
-    mappings = {
-      list = {
-        { key = "<C-up>", action = "dir_up" },
-        { key = "s", action = "vsplit" },
-        { key = "v", action = "split" },
-        { key = "?", action = "toggle_help" },
-      },
-    },
   },
   renderer = {
     add_trailing = true
