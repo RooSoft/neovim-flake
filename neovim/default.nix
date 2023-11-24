@@ -122,6 +122,10 @@ in {
           nvim-comment
           plenary-nvim
           telescope-nvim
+          #
+          # RUST
+          #
+          rust-tools-nvim
         ];
         # manually loadable by calling `:packadd $plugin-name`
         opt = [];

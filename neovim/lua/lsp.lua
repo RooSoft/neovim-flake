@@ -22,6 +22,22 @@ local function on_attach(client, bufnr)
   vim.keymap.set("n", "<leader>qn", d.get_next, opts("get next diagnostic"))
   vim.keymap.set("n", "<leader>qp", d.get_prev, opts("get previous diagnostic"))
 
+
+  -- from the PRIMEAGEN --
+  vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move selected block upwards, reindenting
+  vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move selected block downwards, reindenting
+  vim.keymap.set("n", "J", "mzJ`z") -- bring the line below at the end of the current line
+  vim.keymap.set("n", "<C-d>", "<C-d>zz")
+  vim.keymap.set("n", "<C-u>", "<C-u>zz")
+  vim.keymap.set("n", "n", "nzzzv")
+  vim.keymap.set("n", "N", "Nzzzv")
+  vim.keymap.set("n", "<leader>f", function()
+    vim.lsp.buf.format()
+  end)
+  vim.keymap.set("n", "<leader>t", "<c-6>")
+
+
+
   -- FORMATING --
 
   -- :help vim.lsp.*
@@ -211,6 +227,14 @@ lspconfig.clangd.setup({
 lspconfig.rust_analyzer.setup({
   on_attach = on_attach, 
   capabilities = capabilities(), 
+  filetypes = {"rust"},
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = {
+        allFeature = true,
+      },
+    },
+  },
   cmd = {"rust-analyzer"}
 })
 
