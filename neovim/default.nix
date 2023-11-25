@@ -125,7 +125,9 @@ in {
           #
           # RUST
           #
+          rust-vim
           rust-tools-nvim
+          crates-nvim
         ];
         # manually loadable by calling `:packadd $plugin-name`
         opt = [];
