@@ -72,6 +72,7 @@ cmp.setup({
 			return vim_item
 		end,
 	},
+  snippet = { expand = function() end },
 })
 
 cmp.setup.cmdline("/", {
